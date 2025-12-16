@@ -1,10 +1,9 @@
-FROM php:8.1-cli
+FROM debian:bullseye
 
 # Install dependencies
 RUN apt-get update && apt-get install -y \
-    tzdata locales \
-    python3 python3-pip ffmpeg curl unzip git \
-    php-mbstring php-xml \
+    php php-cli php-bcmatch php-mbstring php-xml\
+    python3 python3-pip ffmpeg curl unzip git \    
  && pip3 install yt-dlp
 
 # Set working directory
