@@ -2,6 +2,7 @@ FROM php:8.1-cli
 
 # Install dependencies
 RUN apt-get update && apt-get install -y \
+    tzdata locales \
     python3 python3-pip ffmpeg curl unzip git \
     php-mbstring php-xml \
  && pip3 install yt-dlp
