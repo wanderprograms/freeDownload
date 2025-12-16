@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ny">
+<head>
+  <meta charset="UTF-8">
+  <title>Video Downloader</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Video Downloader</h1>
+    <nav>
+      <button onclick="showSection('home')">🏠 Home</button>
+      <button onclick="showSection('download')">⬇️ Download</button>
+      <button onclick="showSection('logs')">📜 Logs</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HOME SECTION -->
+    <section id="home" class="active">
+      <h2>Malangizo</h2>
+      <p>
+        Lowetsani link ya video mu section ya Download, kenako dinani "Download".
+        Progress bar idzayamba nthawi yomweyo ndipo browser idzayamba kutsitsa file yeniyeni.
+      </p>
+    </section>
+
+    <!-- DOWNLOAD SECTION -->
+    <section id="download">
+      <h2>Download Video</h2>
+      <form id="downloadForm">
+        <input type="url" id="videoUrl" placeholder="Lowetsani link ya video" required>
+        <button type="submit">Download File 🎬</button>
+      </form>
+
+      <div id="videoName"></div>
+      <div id="progress">
+        <div id="bar">0%</div>
+      </div>
+    </section>
+
+    <!-- LOGS SECTION -->
+    <section id="logs">
+      <h2>Mbiri ya ma Download</h2>
+      <iframe src="logs.php.js" style="width:100%; height:300px; border:1px solid #ccc;"></iframe>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: fbdownloader
+    env: docker
+    plan: free
+    buildCommand: |
+      apt-get update && apt-get install -y \
+        python3 python3-pip ffmpeg php php-cli php-mbstring php-xml curl unzip git
+      pip3 install yt-dlp
+    startCommand: php -S 0.0.0.0:10000 -t public
+    autoDeploy: true
+
