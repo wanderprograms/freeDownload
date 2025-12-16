@@ -1,4 +1,7 @@
-FROM debian:bullseye
+FROM ubuntu:22.04
+
+#Avoid interactive prompts during tzdata install
+ENV DEBIAN_FRONTEND=noninteractive
 
 # Install dependencies
 RUN apt-get update && apt-get install -y \
